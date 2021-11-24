@@ -6,15 +6,16 @@
 """
 # 导包
 from selenium import webdriver
-# from selenium.webdriver.chrome.service import Service
-# import time
-# s = Service(r'd:\webdrivers\chromedriver.exe')
-# file = r'd:\webdrivers\chromedriver.exe'
-# wd = webdriver.Chrome(file)
+import time
 
-wd.get(r'http://127.0.0.1/mgr/sign.html')
+# 创建WebDriver 实例对象 说明使用Chrome浏览器驱动
+# WebDriver = webdriver.Chrome(chromedriver_files =
+#                              Service(r'd:\webdrivers\chromedriver.exe'))  # 手动输入Chrome浏览器驱动地址路径
+WebDriver = webdriver.Chrome()
+# 调用WebDriver 对象的get方法 可以让浏览器打开指定网址
+WebDriver.get(r'http://www.baidu.com')
 
-# time.sleep(2)
+time.sleep(1)
 
-# wd.quit()
+WebDriver.quit()
 

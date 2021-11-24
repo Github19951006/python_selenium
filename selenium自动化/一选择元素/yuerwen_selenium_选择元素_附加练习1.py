@@ -43,7 +43,7 @@ for one in citys_level_list:
     # 发现气温更低的城市
     if lowest == None or ltemp < lowest:
         lowest = ltemp
-        # lowestCitys = [curcity]
+        lowestCitys = [curcity]
     #  温度和当前最低相同，加入列表
     elif ltemp == lowest:
         lowestCitys.append(curcity)

@@ -15,7 +15,7 @@ from selenium.webdriver.common.by import By
 # Google浏览器的驱动器的地址
 webdriver_file = Service(r'd:\webdrivers\chromedriver.exe')
 # 创建webdriver实例对象 说明使用Chrome浏览器驱动
-wb_object = webdriver.Chrome(service=webdriver_file)
+wb_object = webdriver.Chrome(webdriver_file)
 
 # webdriver 实例对象的get方法  让浏览器打开指定的网址
 sample1_file = r'http://cdn1.python3.vip/files/selenium/sample1.html'
