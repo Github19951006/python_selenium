@@ -1,0 +1,18 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyInterpreterInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="lesson_with_a" />
+          <option value="lesson_求和" />
+          <option value="九九乘法表" />
+          <option value="commom.utlis.*" />
+          <option value="config.globaltata" />
+          <option value="自定义类.huawei01.car" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
