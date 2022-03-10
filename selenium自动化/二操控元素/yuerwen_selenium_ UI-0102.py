@@ -62,6 +62,10 @@ if list_element == input_value:
 else:
 	print('测试不通过')
 	
+
 webdriver_object.quit()
+
+# webdriver_object.quit()
+
 
 
