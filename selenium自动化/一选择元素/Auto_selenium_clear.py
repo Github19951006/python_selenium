@@ -8,17 +8,15 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
+
 # 创建webDriver 实例对象
 webDriver = webdriver.Chrome()
-webDriver.get(r'http://www.baidu.com')
+webDriver.get(r'https://cdn2.byhy.net/files/selenium/test3.html')
 
-# webDriver.find_element(By.ID,'kw').send_keys('文跃锐')
-# webDriver.find_element(By.ID,'kw').click()
+# 清除文本框的内容：clear()方法
+webDriver.find_element(By.ID,'input1').clear()
+webDriver.find_element(By.ID,'input1').send_keys('yuerwen（文跃锐）')
 
+webDriver.quit()
 
-# webDriver.find_element(By.ID,'su').click()
-
-webDriver.find_element(By.LINK_TEXT,'新闻').click()
-
-# webDriver.quit()
 
