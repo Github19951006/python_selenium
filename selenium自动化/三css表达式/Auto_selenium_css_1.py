@@ -15,6 +15,9 @@ wd.implicitly_wait(5)
 web_file = r'http://cdn1.python3.vip/files/selenium/sample1.html'
 wd.get(web_file)
 
-print(wd.find_element(By.CSS_SELECTOR,'.animal').text)
+# 获取动物类 的动物名称
+animals = wd.find_elements(By.CSS_SELECTOR,'.animal')
+animal_list = [animal.text for animal in animals]
+print(animal_list) # ['狮子', '老虎', '山羊']
 
 wd.quit()
