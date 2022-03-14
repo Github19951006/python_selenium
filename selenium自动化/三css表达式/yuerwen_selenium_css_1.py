@@ -5,11 +5,9 @@
 @File   :yuerwen_selenium_css_1.py
 """
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 
-chromedriver_file = Service(r'd:\webdrivers\chromedriver.exe')
-wd = webdriver.Chrome(service=chromedriver_file)
+wd = webdriver.Chrome()
 
 # 创建等待时间
 wd.implicitly_wait(5)
