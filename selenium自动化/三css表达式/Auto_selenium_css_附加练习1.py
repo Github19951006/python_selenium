@@ -52,6 +52,12 @@ webDriver.find_elements(By.CSS_SELECTOR,'.j_filter .fbox > .fmt > .clist a')[9].
 time.sleep(1)
 
 # 获取职位和公司
+'''
+job_name  :职位名称
+job_time  :发布时间
+job_sal   :工资
+blank     :公司名称
+'''
 for joblist_element in webDriver.find_elements(By.CSS_SELECTOR,'.j_joblist .e'):
 	job_name = joblist_element.find_element(By.CSS_SELECTOR,'.el > .t span[title]').text
 	job_time = joblist_element.find_element(By.CSS_SELECTOR, '.el > .t .time').text
