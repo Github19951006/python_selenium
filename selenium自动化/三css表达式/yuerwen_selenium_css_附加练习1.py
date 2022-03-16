@@ -20,11 +20,11 @@ Python软件开发工程师 | 03-23发布 | 0.8-1万/月 | 上海特速网络科
 Python开发工程师 | 03-23发布 | 1.5-2万/月 | 上海豪亿信息科技有限公司
 '''
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
+import time
 
-chromedriver_file = Service(r'd:\webdrivers\chromedriver.exe')
-wd = webdriver.Chrome(service=chromedriver_file)
+# 创建Chrome的驱动器
+wd = webdriver.Chrome()
 
 # 创建等待时间
 wd.implicitly_wait(5)
@@ -34,9 +34,11 @@ web_file = r'http://www.51job.com'
 wd.get(web_file)
 
 # 输入python关键字
-wd.find_element(By.CSS_SELECTOR,'#kwdselectid').send_keys('python')
+wd.find_element(By.CSS_SELECTOR,'#kwdselectid').send_keys('测试开发')
 wd.find_element(By.CSS_SELECTOR,'#work_position_click > .dicon').click()
-category_hz_element = wd.find_element(By.CSS_SELECTOR,'#work_position_click_center_right_list_000000  #work_position_click_center_right_list_category_000000_080200')
+category_hz_element = wd.find_element(By.CSS_SELECTOR,
+                                      '#work_position_click_center_right_list_000000  '
+                                      '#work_position_click_center_right_list_category_000000_040000')
 # category_hz_element.clear()
 category_hz_element.click()
 # 点击确认按钮
@@ -44,9 +46,14 @@ wd.find_element(By.CSS_SELECTOR,'#work_position_click_bottom_save').click()
 # 点击搜索按钮
 wd.find_element(By.CSS_SELECTOR,'.radius_5 > .top_wrap button').click()
 
+# 月薪范围：1.5-2w
+wd.find_elements(By.CSS_SELECTOR,'.j_filter .fbox > .fmt > .clist a')[9].click()
+
+time.sleep(1)
+
 # 获取职位和公司
-joblist_element = wd.find_element(By.CSS_SELECTOR,'.j_joblist')
-for e in joblist_element.find_elements(By.CSS_SELECTOR,'.e'):
+# joblist_element = wd.find_element(By.CSS_SELECTOR,'.j_joblist')
+for e in wd.find_elements(By.CSS_SELECTOR,'.j_joblist .e'):
 	job_name = e.find_element(By.CSS_SELECTOR,'.el > .t span[title]').get_attribute('title')
 	job_time = e.find_element(By.CSS_SELECTOR, '.el > .t .time').text
 	job_sal = e.find_element(By.CSS_SELECTOR, '.el > .info .sal').text
