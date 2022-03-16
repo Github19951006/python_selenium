@@ -39,7 +39,7 @@ wd.find_element(By.CSS_SELECTOR,'#work_position_click > .dicon').click()
 category_hz_element = wd.find_element(By.CSS_SELECTOR,
                                       '#work_position_click_center_right_list_000000  '
                                       '#work_position_click_center_right_list_category_000000_040000')
-# category_hz_element.clear()
+
 category_hz_element.click()
 # 点击确认按钮
 wd.find_element(By.CSS_SELECTOR,'#work_position_click_bottom_save').click()
