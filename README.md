@@ -1,7 +1,9 @@
 # python_selenium
-学习python基础及进阶和selenium实战运用，记录自己一步一个脚印的学习历程
+学习python基础及进阶和selenium实战运用
+
 python基础知识
 学习网址：http://v3.byhy.net/tut/py/basic/01/
+
 1、安装与运行
 
 2、对象及数字对象
