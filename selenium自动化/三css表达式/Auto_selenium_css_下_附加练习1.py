@@ -43,8 +43,7 @@ webDriver.find_element(By.CSS_SELECTOR,'#work_position_input').click()
 # 确保界面稳定(有页面交互，所以要设置一下缓冲时间)
 time.sleep(1)
 
-# 取消 已经选择的
-webDriver.implicitly_wait(1)
+# 取消 已经选择的工作地点
 selectedCityEles = webDriver.find_elements(By.CSS_SELECTOR,
                                             '#work_position_click_center_right_list_000000 em[class=on]')
 webDriver.implicitly_wait(5)
