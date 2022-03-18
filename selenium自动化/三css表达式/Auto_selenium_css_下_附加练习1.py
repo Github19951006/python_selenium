@@ -44,7 +44,6 @@ webDriver.find_element(By.CSS_SELECTOR,'#work_position_input').click()
 time.sleep(1)
 
 # 取消 已经选择的
-# implicitly_wait(1) 隐式等待
 webDriver.implicitly_wait(1)
 selectedCityEles = webDriver.find_elements(By.CSS_SELECTOR,
                                             '#work_position_click_center_right_list_000000 em[class=on]')
