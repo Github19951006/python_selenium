@@ -2,7 +2,7 @@
 @Project ：python 
 @Author : 文跃锐（yuerwen）
 @Time   : 2021/11/24
-@File   :yuerwen_selenium_css_1.py
+@File   :Auto_selenium_css_上_附加练习1.py
 """
 '''
 登录 51job ，

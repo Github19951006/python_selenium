@@ -50,14 +50,16 @@ time.sleep(1)
 
 # 取消 已经选择的
 web_driver.implicitly_wait(1) # implicitly_wait(1) 隐式等待
-selectedCityEles = web_driver.find_elements(By.CSS_SELECTOR,'#work_position_click_center_right_list_000000 em[class=on]')
+selectedCityEles = web_driver.find_elements(By.CSS_SELECTOR,
+                                            '#work_position_click_center_right_list_000000 em[class=on]')
 web_driver.implicitly_wait(1)
 # 点击取消已经选择了的地方
 for e in selectedCityEles:
 	e.click()
 	
 # 选深圳
-web_driver.find_element(By.CSS_SELECTOR,'#work_position_click_center_right_list_category_000000_040000').click()
+web_driver.find_element(By.CSS_SELECTOR,
+                        '#work_position_click_center_right_list_category_000000_040000').click()
 # 点击确认 保存选择
 web_driver.find_element(By.CSS_SELECTOR,'#work_position_click_bottom_save').click()
 
@@ -78,11 +80,13 @@ web_driver.find_element(By.CSS_SELECTOR,'#funtype_click_bottom_save').click()
 
 # 公司性质选 上市公司
 web_driver.find_element(By.ID,'cottype_list').click()
-web_driver.find_element(By.CSS_SELECTOR,'#cottype_list span.li[data-value="10"]').click()
+# web_driver.find_element(By.CSS_SELECTOR,'#cottype_list span.li[data-value="10"]').click()
+web_driver.find_element(By.CSS_SELECTOR,'#cottype_list .ul [title="上市公司"]').click()
 
 # 工作年限
 web_driver.find_element(By.ID,'workyear_list').click()
-web_driver.find_element(By.CSS_SELECTOR,'#workyear_list span.li[data-value="02"]').click()
+web_driver.find_element(By.CSS_SELECTOR,'#workyear_list .ul [title="1-3年"]').click()
+# web_driver.find_element(By.CSS_SELECTOR,'#workyear_list span.li[data-value="02"]').click()
 
 # 点击搜索
 web_driver.find_element(By.CSS_SELECTOR,'.p_but').click()
@@ -98,12 +102,11 @@ web_driver.find_element(By.CSS_SELECTOR,'.p_but').click()
 # 	print(f'{job_name} | {blank} | {at} | {job_sal} | {job_time[:-2]}')
 
 # 搜索结果分析（优化）
-
 jobs = web_driver.find_elements(By.CSS_SELECTOR,'.j_joblist .e')
 for job in jobs:
 	filelds = job.find_elements(By.CSS_SELECTOR,'.jname, .cname, .time, .sal')
 	strField = [fileld.text for fileld in filelds]
-	# print(' | '.join(strField))
+	print(' | '.join(strField))
 
 # 当前窗口的句柄
 main_handl = web_driver.current_window_handle
