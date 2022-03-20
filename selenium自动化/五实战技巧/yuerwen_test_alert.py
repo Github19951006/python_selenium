@@ -26,7 +26,5 @@ print(wd.switch_to.alert.text)
 # 关闭弹窗窗口（点击 OK 按钮）
 wd.switch_to.alert.accept()
 
-
-
 wd.quit()
 
